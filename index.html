@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Visualizer Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Interactive audio visualizer that transforms your music into stunning visual experiences">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Audio <span>Visualizer</span></h1>
+            <p>Experience your music in a new dimension</p>
+        </header>
+
+        <main>
+            <div class="visualizer-container">
+                <canvas id="visualizer"></canvas>
+                <div class="overlay">
+                    <button id="start-btn">Start Visualizer</button>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="audio-source">Audio Source</label>
+                    <select id="audio-source">
+                        <option value="mic">Microphone</option>
+                        <option value="file">Audio File</option>
+                    </select>
+                    <input type="file" id="audio-upload" accept="audio/*" style="display:none">
+                </div>
+
+                <div class="control-group">
+                    <label for="visual-mode">Visual Mode</label>
+                    <select id="visual-mode">
+                        <option value="bars">Frequency Bars</option>
+                        <option value="wave">Oscilloscope</option>
+                        <option value="particles">Particles</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="color-picker">Color Scheme</label>
+                    <input type="color" id="color-picker" value="#ff4d4d">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://twitter.com" class="share-btn" data-platform="twitter" target="_blank">Twitter</a>
+                <a href="https://facebook.com" class="share-btn" data-platform="facebook" target="_blank">Facebook</a>
+                <a href="https://instagram.com" class="share-btn" data-platform="instagram" target="_blank">Instagram</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <!-- Contact Developer Button -->
+    <a href="https://t.me/Legend_of_multiverse" class="contact-btn" target="_blank">
+        <i class="fas fa-paper-plane"></i> Contact Developer
+    </a>
+</body>
+</html>
